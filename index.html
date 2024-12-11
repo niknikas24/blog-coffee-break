@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная - Блог о кофе</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="https://kit.fontawesome.com/87fa34aea3.js" crossorigin="anonymous"></script>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated-section {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .btn-animated:hover {
+            background-color: #ff5900;
+            color: #ffffff;
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+        }
+
+        header::after {
+            content: 'Всем привет!';
+            display: block;
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #54fc00;
+            /* Зелёный цвет */
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            display: none;
+            /* По умолчанию скрыто */
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* Эффект при наведении */
+        .scroll-to-top:hover {
+            background-color: #ff5900;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Шапка сайта -->
+        <header class="bg-white text-center py-3">
+            <h1><i class="fa-solid fa-mug-hot"></i> Блог о кофе</h1>
+        </header>
+
+        <!-- Навигационное меню -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="types.html"><i class="fa-solid fa-list"></i> Виды и сорта</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="wheel.html">
+                            <i class="fa-solid fa-gear"></i> Колесо вкусов</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://ru.ruwiki.ru/wiki/Латте-арт">
+                            <i class="fa-solid fa-paintbrush"></i> Латте-арт</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://ru.ruwiki.ru/wiki/История_кофе">
+                            <i class="fa-solid fa-book-open-reader"></i> История кофе</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://ru.ruwiki.ru/wiki/Растворимый_кофе">
+                            <i class="fa-sharp fa-solid fa-mug-saucer"></i> Растворимый кофе</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Интерактивные элементы -->
+        <section class="animated-section my-4 text-center">
+            <h2><i class="fa-solid fa-thumbs-up"></i> Поставить лайк!</h2>
+            <button class="btn btn-animated btn-primary m-2">Кликнуть!</button>
+        </section>
+
+        <div id="toast" class="toast align-items-center text-white bg-success"
+            style="position: fixed; bottom: 10px; right: 10px; display: none;">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Спасибо, что оценили данную работу!💯 
+                    Также можно скачать видео 📺 и аудио 🎧 нажав на соответствующую кнопку!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto"></button>
+            </div>
+        </div>
+
+        <!-- Разделы с текстом и фотографиями -->
+        <div class="shadow p-3 mb-5 bg-body rounded">
+            <h2><i class="fa-solid fa-globe"></i> О кофейных традициях разных стран</h2>
+            <p> <b>Кофе</b> – важная часть культуры, объединяющая людей по всему миру. И в каждой стране свои традиции приготовления и подачи любимого напитка, связанные с историей и местными обычаями. Сегодня поделюсь с Вами фактами о приготовлении кофе в разных регионах:
+
+                <ul>
+                
+                </li><li>В <b>Турции</b> кофе готовят на раскаленном песке, делая его густым и насыщенным. В основном подается с добавлением кардамона, а сам ритуал приготовления символизирует гостеприимство. Турецкая поговорка даже гласит: «Кофе должен быть черным, как ад, крепким, как смерть, и сладким, как любовь». 
+                
+                </li><li><b>Эфиопия</b> – родина кофе, и здесь каждая чашка сопровождается церемонией, где обжарка и приготовление происходят прямо перед гостями. Эфиопцы считают, что кофе способен объединить людей и наладить взаимоотношения. Угощение таким напитком – особый знак дружелюбия и уважения. 
+                
+                </li><li>В <b>Швеции</b> существует традиция “fika” – короткий перерыв на кофе с выпечкой, который устраивают каждые два часа (но длится он не больше 15 минут). Это время спокойствия и общения в кругу друзей, коллег или семьи. Здесь кофе пьют с молоком и часто дополняют перерыв сладостями.
+                
+                </li><li><b>Марокко</b> славится своим пряным кофе, в который добавляют корицу, мускатный орех и другие специи. Это делает напиток не только бодрящим, но и пикантно согревающим. Для марокканцев кофе – символ радушного гостеприимства. 
+                </li></ul>
+                
+                <p><img src="resources/images/map.jpg">
+                </p>	
+            </div>
+          
+            <!-- Видео -->
+            <section class="animated-section my-4 text-center">
+                <h2><i class="fa-solid fa-video"></i> Видео для отдыха</h2>
+                <video controls class="w-75">
+                    <source src="video_coffee_medium.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+            </section>
+
+            <a href="video_coffee_medium.mp4" download id="downloadButton" class="btn btn-animated btn-secondary m-2">Скачать видео для отдыха</a>
+
+            <p> 
+                Каждая культура придает кофе свое значение – будь то символ дружелюбия, гостеприимства или просто способ взбодриться.
+            </p>
+            <p>
+                Погружайтесь в мировую кофейную культуру вместе со мной! <b>Небольшой бонус</b> - расслабляющая музыка 😉
+            </p>
+
+            <!-- Аудио -->
+            <section class="animated-section my-4 text-center">
+                <h2><i class="fa-solid fa-music"></i> Расслабляющая музыка</h2>
+                <audio controls>
+                    <source src="audio_relaxing_music.mp3" type="audio/mpeg">
+                    Ваш браузер не поддерживает аудио.
+                </audio>
+            </section>
+
+            <a href="audio_relaxing_music.mp3" download id="downloadButton" class="btn btn-animated btn-secondary m-2">Скачать расслабляющую музыку</a>
+
+            <div class="shadow p-3 mb-5 bg-body rounded">
+                <h3><i class="fa-solid fa-palette"></i> Отражение кофе в искусстве</h3>
+                <p> <b>Кофе</b> – не просто напиток, а настоящий источник вдохновения, который находит отражение в самых разных видах искусства. Во все эпохи и в каждой культуре он приобретает особое символическое значение, проникая в музыку, живопись, литературу и искусство.
+                    </p>
+                    
+                    <p><img src="resources/images/art.jpg"></p>
+                    
+                    <h2>Музыка</h2>
+                <p>
+                    Кофейни с давних времен были местом встреч для музыкантов, композиторов и певцов. Например, «Кофейная кантата» Баха впервые была представлена в Кофейном доме Циммермана, а джазовые и современные мелодии до сих пор создают атмосферу уюта в кофейнях. 
+                </p>
+                    <h2>Живопись</h2>
+                <p>
+                    На полотнах художников кофе часто является элементом повседневности и передает атмосферу доброго общения. В картинах Эдварда Хоппера изображены моменты, как гости кофеен уединяются за чашкой кофе и погружаются в размышления. А современные художники создают картины, используя кофе как краску!
+                </p>
+                    <h2>Литература</h2>
+                <p>
+                    Чашка кофе стала неизменным спутником многих литературных произведений. Хемингуэй, Пруст, Чехов, Кафка и другие известные писатели не раз использовали такой художественный элемент, чтобы передать состояние рефлексии и вдохновения, добавляя герою глубины и осознанности. 
+                </p>
+                    <h2>Прикладное искусство и скульптура</h2>
+                <p>
+                    Изящные чашки, расписные кофейники и керамические воронки превращаются в настоящие произведения искусства, в которых сочетаются эстетика и функциональность. Мастера сохраняют традиции кофейных церемоний и передают уважение к культуре напитка, объединяя людей по всему миру и создавая пространство для общения и творчества. 
+                </p>
+                <p>
+                    Кофе занимает особое место в каждой культуре, вдохновляя на создание уникальных произведений искусства.
+                </p>
+            </div>
+
+            <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="resources/images/art1.jpg" 
+                            class="d-block w-100" alt="Фото кофе">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="resources/images/art2.jpg"
+                            class="d-block w-100" alt="Фото кофе2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="resources/images/art3.jpg"
+                            class="d-block w-100" alt="Фото кофе3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующий</span>
+                </button>
+            </div>
+
+            <div class="shadow p-3 mb-5 bg-body rounded">
+                <h4><i class="fa-solid fa-paintbrush"></i> Латте-арт - искусство которое завораживает с первого взгляда</h4>
+                <p> <b>Латте-арт</b> – это техника создания рисунков на поверхности кофе с использованием молочной пенки. От простых сердечек и нежных розет до удивительных изображений животных, которые давно стали символом мастерства бариста.</p>
+
+                <p><img src="resources/images/latte_art.jpg"></p>
+
+                <p>
+                    По всему миру кофейные энтузиасты экспериментируют над техникой латте-арта, чтобы удивлять своих гостей. Например:  
+                </p>
+
+                <ul>
+                <li><b>3D-латте-арт</b> – объёмные фигурки животных, цветов или даже персонажей мультфильмов, которые «выглядывают» из чашки. Такой кофе можно увидеть в Reissue Café в Токио.  
+                </li><li><b>
+                Фотопечать на кофе</b> – технологии позволяют наносить на напиток любой рисунок или даже фотографии. Одним из ярких примеров такого подхода является сеть кофеен Ripple Maker в Нью-Йорке.  
+                </li><li><b>
+                Этнические узоры и необычные формы</b> – сложные геометрические рисунки или миниатюрные пейзажи можно встретить в кофейнях Сеула, например, в Café Yeonnam-dong 239-20.  
+                </li>
+                </ul>
+
+                <p>
+                    Однако, несмотря на все эксперименты, латте-арт – это не только про красоту.
+                </p>
+                <p>
+                    В эспрессо-барах придерживаются классического подхода: чёткие и контрастные рисунки, расположенные симметрично по центру чашки. Важно, чтобы латте-арт был не просто украшением, но гармонично дополнял каждую чашку, не отвлекая от главного – самого напитка.
+                </p>
+            </div>
+
+            <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="resources/images/latte_art1.jpg"
+                            class="d-block w-100" alt="Фото латте-арт">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="resources/images/latte_art2.jpg" 
+                            class="d-block w-100" alt="Фото латте-арт2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="resources/images/latte_art3.jpg"
+                            class="d-block w-100" alt="Фото латте-арт3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующий</span>
+                </button>
+            </div>
+
+            <button class="scroll-to-top" id="scrollToTopBtn" title="Наверх">
+                ↑
+            </button>
+
+            <!-- Подвал -->
+            <footer class="bg-white text-center py-3">
+                <p><i class="fa-solid fa-copyright"></i> Блог о кофе</p>
+            </footer>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+        <script src="scriptHomepage.js"></script>
+</body>
+
+</html>
